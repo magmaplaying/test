@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вяра Христова – счетоводител</title>
+  <meta name="description" content="Вяра Христова – счетоводител. Счетоводство за фирми, заплати, регистрация на фирми и данъчни декларации.">
+
+  <!-- Fonts from Google Fonts: Alegreya (headings), Onest (text), Caveat (handwriting) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Caveat:wght@500;700&family=Onest:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Към съдържанието</a>
+
+  <!-- ===== Top bar ===== -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Вяра Христова – начало">
+        <span class="brand__mark" aria-hidden="true">ВХ</span>
+        <span class="brand__name" data-i18n="brandName">Вяра Христова</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#services" data-i18n="navServices">Услуги</a>
+        <a href="#deadlines" data-i18n="navDeadlines">Срокове</a>
+        <a href="#about" data-i18n="navAbout">За мен</a>
+        <a href="#contact" data-i18n="navContact">Контакт</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Език / Language">
+        <button type="button" data-lang="bg" aria-pressed="true">БГ</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="hand hero__hello" data-i18n="heroHello">Здравейте,</p>
+          <h1 class="hero__title" data-i18n-html="heroTitle">аз съм Вяра — <em>вашият счетоводител.</em></h1>
+          <p class="hero__lead" data-i18n="heroLead">Водя счетоводството на малки фирми, семейни бизнеси и хора на свободна практика. Вие се занимавате с работата си, а аз — с документите, декларациите и сроковете.</p>
+          <div class="hero__actions">
+            <a class="btn btn--ink" href="#contact" data-i18n="heroCta">Пишете ми</a>
+            <!-- PLACEHOLDER: replace the phone number in both places below -->
+            <a class="btn btn--line" href="tel:+359880000000">
+              <span data-i18n="heroCall">Обадете се:</span>&nbsp;+359 88 000 0000
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero__side" aria-label="Snapshot">
+          <div class="portrait" aria-hidden="true"><span>ВХ</span></div>
+
+          <!-- The sticky note. Its content is filled in by script.js from today's date. -->
+          <div class="note" id="next-deadline" aria-live="polite">
+            <p class="note__label" data-i18n="noteLabel">Следващ срок</p>
+            <p class="note__date hand" data-slot="date">—</p>
+            <p class="note__what" data-slot="what"></p>
+            <p class="note__left" data-slot="left"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Services, written as ledger rows ===== -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 data-i18n="servicesTitle">С какво мога да помогна</h2>
+          <p class="section__sub" data-i18n="servicesSub">Четири неща, които правя всеки ден. Ако не сте сигурни от кое имате нужда — пишете ми и ще го изясним заедно.</p>
+        </header>
+
+        <div class="ledger" role="list">
+          <article class="ledger__row" role="listitem">
+            <h3 data-i18n="s1Title">Счетоводство на фирми</h3>
+            <p data-i18n="s1Body">Месечно осчетоводяване на документи, ДДС декларации и дневници, годишен финансов отчет (ГФО) и годишна данъчна декларация.</p>
+            <p class="ledger__for" data-i18n="s1For">За ЕООД, ООД и ЕТ</p>
+          </article>
+          <article class="ledger__row" role="listitem">
+            <h3 data-i18n="s2Title">Заплати и персонал</h3>
+            <p data-i18n="s2Body">Ведомости за заплати, трудови договори, болнични и отпуски, месечни декларации за осигуровки към НАП.</p>
+            <p class="ledger__for" data-i18n="s2For">За работодатели с 1 или повече служители</p>
+          </article>
+          <article class="ledger__row" role="listitem">
+            <h3 data-i18n="s3Title">Регистрация на фирма</h3>
+            <p data-i18n="s3Body">Помагам да изберете правната форма, подготвям документите за Търговския регистър и регистрация по ДДС, когато е нужна.</p>
+            <p class="ledger__for" data-i18n="s3For">За всеки, който започва собствен бизнес</p>
+          </article>
+          <article class="ledger__row" role="listitem">
+            <h3 data-i18n="s4Title">Лични данъчни декларации</h3>
+            <p data-i18n="s4Body">Годишна декларация за доходите — от наем, хонорари, свободна практика или доходи от чужбина. Попълвам и подавам вместо вас.</p>
+            <p class="ledger__for" data-i18n="s4For">За физически лица и свободни професии</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Deadlines (filled by script.js) ===== -->
+    <section class="section section--tint" id="deadlines">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 data-i18n="deadlinesTitle">Сроковете, които следя вместо вас</h2>
+          <p class="section__sub" data-i18n="deadlinesSub">Най-важните дати в годината на един малък бизнес. Подредени са по това кой срок идва първи.</p>
+        </header>
+
+        <ol class="deadlines" id="deadline-list"></ol>
+        <p class="fineprint" data-i18n="deadlinesNote">Когато срокът се падне в събота или неделя, той се премества на следващия работен ден. Списъкът е ориентировъчен — за вашия случай ще ви кажа точните дати.</p>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="about__text">
+          <h2 data-i18n="aboutTitle">Малко за мен</h2>
+          <!-- PLACEHOLDER: replace this bio with Вяра's real story (years of experience, qualifications, etc.) -->
+          <p data-i18n="aboutP1">Казвам се Вяра Христова и работя като счетоводител. Обичам реда в документите, но още повече обичам, когато клиентите ми спят спокойно, защото знаят, че всичко е подадено навреме.</p>
+          <p data-i18n="aboutP2">Работя лично с всеки клиент — няма да ви прехвърлят между служители. Ако имате въпрос, говорите директно с мен и получавате отговор на разбираем език, без излишни термини.</p>
+          <p class="hand signature">Вяра</p>
+        </div>
+
+        <div class="about__steps">
+          <h3 data-i18n="stepsTitle">Как започваме</h3>
+          <ol class="steps">
+            <li>
+              <strong data-i18n="step1Title">Пишете или се обадете</strong>
+              <span data-i18n="step1Body">Разкажете ми накратко с какво се занимавате и от какво имате нужда.</span>
+            </li>
+            <li>
+              <strong data-i18n="step2Title">Среща и документи</strong>
+              <span data-i18n="step2Body">Виждаме се или говорим онлайн. Преглеждам документите ви и ви казвам какво ще правя и колко ще струва.</span>
+            </li>
+            <li>
+              <strong data-i18n="step3Title">Договор и спокойствие</strong>
+              <span data-i18n="step3Body">Подписваме договор и от следващия месец поемам счетоводството. Вие само ми изпращате документите.</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--tint" id="contact">
+      <div class="wrap contact">
+        <div class="contact__info">
+          <h2 data-i18n="contactTitle">Пишете ми</h2>
+          <p class="section__sub" data-i18n="contactSub">Отговарям в рамките на един работен ден. Първият разговор е безплатен.</p>
+
+          <!-- PLACEHOLDER: replace phone, email and address with the real ones -->
+          <dl class="details">
+            <dt data-i18n="phoneLabel">Телефон</dt>
+            <dd><a href="tel:+359880000000">+359 88 000 0000</a></dd>
+            <dt data-i18n="emailLabel">Имейл</dt>
+            <dd><a href="mailto:vyara@example.com">vyara@example.com</a></dd>
+            <dt data-i18n="addressLabel">Адрес</dt>
+            <dd data-i18n="address">ул. „Примерна“ 1, гр. София</dd>
+            <dt data-i18n="hoursLabel">Работно време</dt>
+            <dd data-i18n="hours">Понеделник – петък, 9:00 – 18:00</dd>
+          </dl>
+        </div>
+
+        <!--
+          The form sends messages through Formspree (formspree.io).
+          PLACEHOLDER: replace YOUR_FORM_ID with the ID Formspree gives you.
+        -->
+        <form class="form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div class="field">
+            <label for="f-name" data-i18n="fName">Вашето име</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-contact" data-i18n="fContact">Телефон или имейл</label>
+            <input id="f-contact" name="contact" type="text" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-topic" data-i18n="fTopic">За какво става дума?</label>
+            <select id="f-topic" name="topic">
+              <option data-i18n="s1Title">Счетоводство на фирми</option>
+              <option data-i18n="s2Title">Заплати и персонал</option>
+              <option data-i18n="s3Title">Регистрация на фирма</option>
+              <option data-i18n="s4Title">Лични данъчни декларации</option>
+              <option data-i18n="fOther">Друго</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg" data-i18n="fMsg">Съобщение</label>
+            <textarea id="f-msg" name="message" rows="5" required data-i18n-placeholder="fMsgPh" placeholder="Например: имам ЕООД с двама служители и търся нов счетоводител."></textarea>
+          </div>
+          <!-- Hidden field: Formspree uses it to filter spam bots -->
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off">
+          <button class="btn btn--ink" type="submit" data-i18n="fSend">Изпрати съобщението</button>
+          <p class="form__status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> <span data-i18n="brandName">Вяра Христова</span> · <span data-i18n="footerRole">счетоводител</span></p>
+      <a href="#top" data-i18n="toTop">Към началото ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
