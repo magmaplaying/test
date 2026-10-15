@@ -6,21 +6,22 @@
 
 /* ---- Design tokens: change colours and fonts here ---- */
 :root {
-  --paper:      #F3F5F1;  /* soft grey-green: page background */
-  --paper-deep: #E7ECE3;  /* slightly darker, for alternate sections */
-  --rule:       #D3DBCE;  /* borders and dividers */
+  --paper:      #F8F6F2;  /* warm light grey: page background */
+  --paper-deep: #FCEFD6;  /* soft honey, for alternate sections */
+  --rule:       #E8DFCF;  /* borders and dividers */
   --ink:        #1E2B3C;  /* deep fountain-pen ink: main text */
   --ink-soft:   #4A5868;  /* secondary text */
   --pen:        #2B4C9B;  /* ballpoint blue: links, handwriting */
   --note:       #F6C64F;  /* warm yellow accent */
+  --note-soft:  #FFF4D6;  /* pale yellow for the free-consultation badge */
   --margin:     #C9503E;  /* red: form errors only */
-  --white:      #FBFCFA;
+  --white:      #FFFEFC;
 
   --font-display: "Alegreya", Georgia, serif;
   --font-body:    "Onest", system-ui, sans-serif;
   --font-hand:    "Caveat", "Comic Sans MS", cursive;
 
-  --radius: 10px;
+  --radius: 16px;
   --wrap: 1120px;
 }
 
@@ -187,7 +188,7 @@ a { color: var(--pen); text-underline-offset: 3px; }
 }
 @media (min-width: 900px) {
   .hero { padding: 88px 0 104px; }
-  .hero__inner { grid-template-columns: 1.35fr 1fr; gap: 64px; }
+  .hero__inner { grid-template-columns: 1.6fr 1fr; gap: 56px; }
 }
 
 .hero__hello {
@@ -212,11 +213,32 @@ a { color: var(--pen); text-underline-offset: 3px; }
   font-size: 1.15rem;
   color: var(--ink-soft);
 }
+/* "First consultation is free" badge */
+.free {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+  padding: 10px 18px 10px 12px;
+  border-radius: 999px;
+  background: var(--note-soft);
+  border: 1.5px solid var(--note);
+  font-weight: 600;
+}
+.free__icon {
+  display: grid;
+  place-items: center;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--note);
+  font-size: 1rem;
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .hero__side {
@@ -477,6 +499,7 @@ a { color: var(--pen); text-underline-offset: 3px; }
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--pen) 22%, transparent);
 }
 .field [aria-invalid="true"] { border-color: var(--margin); }
+.form__intro { color: var(--ink-soft); }
 .form .btn { justify-self: start; }
 .form__status { min-height: 1.6em; font-weight: 500; }
 .form__status.is-ok { color: #2E6B3A; }
