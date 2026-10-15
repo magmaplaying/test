@@ -294,7 +294,7 @@ function renderDeadlines() {
     list.appendChild(li);
   });
 
-  // The sticky note in the hero shows the first one
+  // The card in the hero shows the first one
   const first = items[0];
   const note = document.getElementById("next-deadline");
   note.querySelector('[data-slot="date"]').textContent = `${first.date.getDate()} ${MONTHS[lang][first.date.getMonth()]}`;
